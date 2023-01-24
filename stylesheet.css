@@ -1,0 +1,52 @@
+@font-face {
+    font-family: myGotham;
+    src: url(GothamMedium.ttf);
+}
+
+
+body {
+    margin: 0;
+}
+
+.banner {
+    background: black;
+}
+
+.ucf_banner {
+    padding: 2px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;   
+}
+
+.ucf_text {
+    line-height: 1.5;
+    font-family: myGotham;
+    color: #ffc904;
+    font-size: small;
+    font-kerning: initial;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: 2px black;
+}
+
+.container form {
+    margin: 70px;
+    width: 21%;
+    height: 40%;
+    padding: 100px;
+    position: relative; left:-40px; top: 15px;
+    background-color: #ffc904;
+    opacity: .25;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.container_2 {
+    margin:auto
+}
