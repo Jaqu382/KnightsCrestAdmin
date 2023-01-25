@@ -3,8 +3,43 @@
     src: url(GothamMedium.ttf);
 }
 
+#header {
+    background-color: black;
+    width: 550px;
+    height: 50px;
+  }
+  
+  
+  #page_title {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #333;
+      margin-bottom: 10px;
+     font-family: "Helvetica Neue";
+  }
+  
+  h1 {
+      line-height: 40px;
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 30px;
+      font-weight: normal;
+  }
+  
+  #login {
+    background-color: #fef1bc;
+    width: 400px;
+    box-shadow: 5px 5px 5px lightgrey;
+    padding: 30px;
+    margin: 20px;
+    display: block;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: bold;
+  }
 
-body {
+  
+/* body {
     margin: 0;
 }
 
@@ -49,4 +84,4 @@ body {
 
 .container_2 {
     margin:auto
-}
+} */
