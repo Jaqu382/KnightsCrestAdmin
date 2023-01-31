@@ -21,7 +21,7 @@
 
 .ucf_text {
     line-height: 1.5;
-    font-family: myGotham;
+    font-family: Arial, Helvetica, sans-serif;
     color: #ffc904;
     font-size: small;
     font-kerning: initial;
@@ -35,7 +35,7 @@
     align-items: center;   
 }
 
-#page_title {
+#title {
     padding-bottom: 15px;
     border-bottom: 1px dotted #333;
     font-family: "Helvetica Neue";
@@ -63,14 +63,37 @@ h1 {
   font-weight: bold;
   border-radius: 5px;
   margin-bottom: 20px;
+  column-gap: 400px;
 }
 
-.box {
+.column2 {
+  background-color: #fef1bc;
+  width: 400px;
+  box-shadow: 0 8px 6px -6px grey;
+  padding: 15px;
+  margin-top:10px;
+  margin-left: 60%;
+  font-family: "Arial";
+  font-size: 14px;
+  border-radius: 5px;
   text-align: center;
   font-weight: normal;
 }
 
-
+.column3 {
+  background-color: rgb(230, 230, 230);
+  border: solid 1px rgb(189, 189, 189);
+  width: 400px;
+  box-shadow: 0 8px 6px -6px grey;
+  padding: 15px;
+  margin-top: 0%;;
+  margin-left: 60%;
+  font-family: "Arial";
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: left;
+  font-weight: normal;
+}
 #user {
   background-color: white;
   border: 1px solids lightgray;
@@ -97,10 +120,26 @@ h1 {
   margin-top: 10px;
   }
 
+  .button {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+  }
+
   .policy {
       text-align: center;
       font-family: Arial;
       font-size: small;
+      color: gray;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
   }
 </style>
 </head>
@@ -117,35 +156,47 @@ h1 {
         </div>
     </div>
 
-<div id="page_title">
+<div id="title">
                     <h1>UCF Federated Identity</h1>
           </div>
           
 <div class = "row">
-<div class = "column">
-   <div id = "login">
-
-Account <br>
-<div id = "user"> Username: NID or DTC-Atlas ID </div>
-<br>
-Password
-<div id = "password">Password</div>
-  </div>
-  </div>
-
-<br>
-                  <p class="policy">
-                  By signing on, you agree to the terms of the
-                  <br>
-                  <strong><a target="_blank" href="http://policies.ucf.edu/">UCF Policies &amp; Procedures</a></strong>.</p>
-                  
   <div class = "column">
-      <div id = "box">
+    <div id = "login">
+
+        Account <br>
+        <div id = "user"> Username: NID or DTC-Atlas ID </div>
+        <br>
+        Password
+        <div id = "password">Password</div>
+        <br>
+
+        <button class="button">Sign On</button>
+
+      </div>
+  </div>
+
+<br>
+   <p class="policy">
+      By signing on, you agree to the terms of the
+      <br>
+      <strong><a target="_blank" href="http://policies.ucf.edu/">UCF Policies &amp; Procedures</a></strong>.
+    </p>
+                  
+    <div class = "column2">
       <h3>my.ucf.edu</h3>
       <p>You have asked to login to my.ucf.edu </p>
       </div>
   </div>
+
+    <div class = "column3">
+      <p>Look up your UCF NID username.</p>
+      <p>Reset your account password.</p>
+      <p>Trouble signing on?</p>
+    </div>
 </div>
+
+<p>ucf logo</p>
 
 </body>
 </html>
