@@ -28,7 +28,7 @@
 }
 
 .ucf_banner {
-    padding: 2px;
+    padding: 0px;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -36,10 +36,11 @@
 }
 
 #title {
+  padding-top: 25px;
     padding-bottom: 15px;
     border-bottom: 1px dotted #333;
     font-family: "Helvetica Neue";
-    margin-left: 80px;
+    margin-left: 90px;
 }
 
 h1 {
@@ -68,7 +69,7 @@ h1 {
 
 .column2 {
   background-color: #fef1bc;
-  width: 400px;
+  width: 350px;
   box-shadow: 0 8px 6px -6px grey;
   padding: 15px;
   margin-top:10px;
@@ -83,17 +84,29 @@ h1 {
 .column3 {
   background-color: rgb(230, 230, 230);
   border: solid 1px rgb(189, 189, 189);
-  width: 400px;
+  width: 350px;
   box-shadow: 0 8px 6px -6px grey;
   padding: 15px;
-  margin-top: 0%;;
+  margin-top: -10%;;
   margin-left: 60%;
   font-family: "Arial";
   font-size: 14px;
   border-radius: 5px;
   text-align: left;
   font-weight: normal;
+  table-layout: auto;
 }
+.column4 {
+  padding: 15px;
+  margin-top: 4%;;
+  margin-left: -47%;
+}
+.ucflogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #user {
   background-color: white;
   border: 1px solids lightgray;
@@ -176,13 +189,7 @@ h1 {
       </div>
   </div>
 
-<br>
-   <p class="policy">
-      By signing on, you agree to the terms of the
-      <br>
-      <strong><a target="_blank" href="http://policies.ucf.edu/">UCF Policies &amp; Procedures</a></strong>.
-    </p>
-                  
+<br>                
     <div class = "column2">
       <h3>my.ucf.edu</h3>
       <p>You have asked to login to my.ucf.edu </p>
@@ -190,15 +197,36 @@ h1 {
   </div>
 
     <div class = "column3">
-      <p>Look up your UCF NID username.</p>
-      <p>Reset your account password.</p>
-      <p>Trouble signing on?</p>
+      <table>
+      <tr>
+      <th>Look up your UCF NID username.</th>
+      </tr>
+      <tr>
+      <th>Reset your account password.</th>
+      </tr>
+      <tr>
+      <th>Trouble signing on?</th>
+      </tr>
+      </table>
     </div>
+
+  </div>
+  <div class="column4">
+  <p class="policy">
+    By signing on, you agree to the terms of the
+    <br>
+    <strong><a target="_blank" href="http://policies.ucf.edu/">UCF Policies &amp; Procedures</a></strong>.
+  </p>
+
 </div>
 
-<p>ucf logo</p>
+<div class = "column5">
+  <img src="images/ucf-logo.jpeg" alt="ucf logo" 
+  width="300"
+  class="ucflogo"
+  ></p>
+</div>
 
 </body>
 </html>
-
 
