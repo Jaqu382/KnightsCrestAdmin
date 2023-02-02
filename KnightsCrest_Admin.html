@@ -11,28 +11,45 @@
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
+  padding: 5px;
 }
 
-.banner {
-  background-color: black;
+/* .banner {
+  background-color: black; */
+  /* max-width: 100%;
+  width: 100%; */
 
-}
+/* } */
 
 .ucf_text {
-    line-height: 1.5;
+    line-height: 2.7;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffc904;
-    font-size: small;
+    font-size: x-small;
     font-kerning: initial;
+    margin-left: 0%;
+    letter-spacing: .3rem;
+}
+#img {
+  margin-left: 9%;
 }
 
 .ucf_banner {
-    padding: 2px;
+    background-color: black;
+    margin-left:0 auto;
+    margin-right: 0 auto;
+    display:flex; 
     max-width: 100%;
-    margin:  0 auto;
-    display:flex;
-    align-items: center;   
+}
+
+.navbar {
+  float: right;
+  padding: 5px;
+  border: none;
+  font-size: smaller;
+  margin-top: 8px;
+  margin-left: 36%;
+  width: 50px;
 }
 
 #title {
@@ -73,8 +90,8 @@ h1 {
   width: 350px;
   box-shadow: 0 8px 6px -6px grey;
   padding: 13px;
-  margin-top:10px;
-  margin-left: 60%;
+  margin-top:-10px;
+  margin-left: 57%;
   font-family: "Arial";
   font-size: 14px;
   border-radius: 5px;
@@ -84,24 +101,23 @@ h1 {
 
 .column3 {
   background-color: rgb(230, 230, 230);
-  border: solid 1px rgb(189, 189, 189);
-  width: 350px;
+  border: solid 1px rgb(204, 203, 203);
+  width: 345px;
   box-shadow: 0 8px 6px -6px grey;
   padding: 15px;
-  margin-top: -10%;;
-  margin-left: 60%;
+  margin-top: -13%;;
+  margin-left: 57%;
   font-family: "Arial";
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: left;
   font-weight: normal;
   /* table-layout: auto; */
 }
 .column4 {
-  padding: -40px;
-  margin-top: 2%;;
+  padding: -60px;
+  margin-top: -2%;;
   margin-left: -47%;
-  height: 50px
 }
 .ucflogo {
   display: block;
@@ -150,7 +166,7 @@ h1 {
       font-family: Arial;
       font-size: small;
       color: gray;
-      height: auto;
+      height: 40px;
   }
 
   a {
@@ -173,16 +189,20 @@ h1 {
 </head>
 <body>
 
-    <div class="banner">
+    <!-- <div class="banner"> -->
         <div class="ucf_banner">
-            <img src="images/pegasuslogo.jpeg" alt="pegasus logo"
+            <img id= "img"
+            src="images/pegasuslogo.jpeg" alt="pegasus logo"
             width="45"
             height="45">
             <div class="ucf_text">
             <p>UNIVERSITY OF CENTRAL FLORIDA</p>
             </div>
+            <div class="navbar">
+              <input type="text" placeholder="Search UCF">
+            </div>
         </div>
-    </div>
+    <!-- </div> -->
 
 <div id="title">
                     <h1>UCF Federated Identity</h1>
@@ -206,7 +226,7 @@ h1 {
 
 <br>                
     <div class = "column2">
-      <h3>my.ucf.edu</h3>
+      <h2>my.ucf.edu</h2>
       <p>You have asked to login to my.ucf.edu </p>
       </div>
   </div>
