@@ -47,8 +47,91 @@
   border: none;
 }
 
+#sidebartitle {
+ color:#333;
+ text-align: center;
+ border-bottom: 1px solid #333;
+ padding-bottom: 5px;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.main {
+  margin-left: 200px;
+  margin-right: 30px;
+  padding-top: 5px;
+  border: 1px solid gray ;
+}
+
 #title {
+    padding-top: 25px;
+    font-family: "arial";
+    border-bottom: 1px dotted #333;
+    color: gray;
+    margin-left: 200px;
+    margin-right: 30px;
+}
+
+#recent {
+  margin-left: 20px;
+  font-size: medium;
+  color: rgb(58, 58, 58);
+}
+
+#input {
+  font-size: large;
+  margin-left:30px;
   color: gray;
+}
+
+#input2{
+  font-size: large;
+  margin-left: 600px;
+  color:gray;
+}
+
+#box {
+  background-color: rgba(211, 211, 211, 0.623);
+  height: 20px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  box-shadow: 0 4px 0px -6px grey;
+  margin-left: 160px;
+  margin-top: -40px;
+
+}
+
+#box2 {
+  background-color: rgba(211, 211, 211, 0.623);
+  height: 20px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  box-shadow: 0 4px 0px -6px grey;
+  margin-left: 730px;
+  margin-top: -40px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  background-color: #ffc904;
+  font-size: large;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
 }
 
 </style>
@@ -65,6 +148,9 @@
 
 <div class="sidenav">
     <p>profile pic</p>
+
+    <h2 id = "sidebartitle">Functions</h2>
+
     <button id = "button">
       <img src="admin/User Search/Search Records Button.png" alt="Search Records">
    </button>
@@ -73,11 +159,52 @@
  </button>
  </div>
 
- <div class = "main">
     <div id = title>
-      <h1>Search Records</h1>  
+      <h1>SEARCH RECORDS</h1>  
     </div>
- </div>
+
+
+    <div class = "main">
+        <p id = "recent">Recently Viewed Students</p>
+
+        <div class = "form">
+          <div class = "row">
+            <div class = "column">
+          <p id = "input">First Name:</p>
+            <div id = "box"></div>
+
+            <p id = "input">Last Name:</p>
+            <div id = "box"></div>
+
+            <p id = "input">Campus:</p>
+            <div id = "box"></div>
+
+            <p id = "input">Date of Birth:</p>
+            <div id = "box"></div>
+
+            </div>
+            <div class = "column">
+              <p id = "input2">Student UCFID:</p>
+              <div id = "box2"></div>
+  
+              <p id = "input2">Student NID:</p>
+              <div id = "box2"></div>
+  
+              <p id = "input2">Knights Cash #:</p>
+              <div id = "box2"></div>
+  
+              <p id = "input2">Library #:</p>
+              <div id = "box2"></div>
+
+              <button class="button">Search</button>
+
+
+            </div>
+          </div>
+          
+  
+        </div>
+    </div>
 
 </body>
 </html>
