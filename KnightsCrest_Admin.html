@@ -53,6 +53,7 @@ h1 {
     font-weight: normal;
 }
 
+/*edit login box*/
 .column {
   background-color: #fef1bc;
   width: 350px;
@@ -69,12 +70,13 @@ h1 {
   column-gap: 400px;
 }
 
+/*edit url connection box*/
 .column2 {
   background-color: #fef1bc;
   width: 350px;
   box-shadow: 0 8px 6px -6px grey;
   padding: 13px;
-  margin-top:10px;
+  margin-top: -8px;
   margin-left: 60%;
   font-family: "Arial";
   font-size: 14px;
@@ -83,6 +85,7 @@ h1 {
   font-weight: normal;
 }
 
+/*edit gray link box*/
 .column3 {
   background-color: rgb(230, 230, 230);
   border: solid 1px rgb(189, 189, 189);
@@ -98,22 +101,27 @@ h1 {
   font-weight: normal;
   /* table-layout: auto; */
 }
+
+/*edit ucf policy blurb*/
 .column4 {
   padding: -40px;
-  margin-top: 2%;;
-  margin-left: -47%;
+  margin-top: -15px;
+  margin-left: -55%;
   height: 50px
 }
+
 .ucflogo {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-#user {
+/*style form*/
+input[type=text] {
   background-color: white;
-  border: 1px solids lightgray;
+  border: 1px solid lightgray;
   height: 30px;
+  width: 300px;;
   font-weight: normal;
   padding: 10px 16px;
   font-size: 18px;
@@ -122,19 +130,6 @@ h1 {
   color: #555;
   margin-top: 10px;
 }
-
-#password {
-  background-color: white;
-  border: 1px solids lightgray;
-  height: 30px;
-  font-weight: normal;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3;
-  border-radius: 6px;
-  color: #555;
-  margin-top: 10px;
-  }
 
   .button {
     background-color: black;
@@ -193,12 +188,14 @@ h1 {
   <div class = "column">
     <div id = "login">
 
-        Account <br>
-        <div id = "user"> Username: NID or DTC-Atlas ID </div>
-        <br>
-        Password
-        <div id = "password">Password</div>
-        <br>
+      <form action="">
+        <label for="user">Account:</label><br>
+        <input type="text" id="user" name="user" value="Username: NID or DTC-Atlas ID"><br><br>
+    
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password" value="Password"><br><br>
+
+        </form>
 
         <a href = "KnightsCrest_AdminHome.html">
         <button class="button" onclick="KnightsCrest_AdminHome.html">Sign On</button>
