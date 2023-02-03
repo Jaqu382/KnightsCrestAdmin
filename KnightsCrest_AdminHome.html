@@ -26,7 +26,7 @@
   left: 0;
   background-color: rgb(163, 163, 163);
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 @media screen and (max-height: 450px) {
@@ -39,6 +39,14 @@
 {
   background-color: transparent;
   border: none;
+}
+
+/*style profile pic*/
+#profile_pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 /*style FUNCTION title*/
@@ -99,54 +107,12 @@ input[type=submit] {
   margin-left: 10px;
 }
 
-/*style column 1 titles*/
-#input {
-  font-size: large;
-  margin-left:20px;
-  color: gray;
-}
-
-/*style column2 titles*/
-#input2{
-  font-size: large;
-  margin-left: 560px;
-  color:gray;
-}
-
-#box {
-  background-color: rgba(211, 211, 211, 0.623);
-  height: 20px;
-  width: 350px;
-  border-radius: 5px;
-  border: 1px solid rgb(154, 154, 154);
-  box-shadow: 0 4px 0px -6px grey;
-  margin-left: 135px;
-  margin-top: -40px;
-
-}
-
-#box2 {
-  background-color: rgba(211, 211, 211, 0.623);
-  height: 20px;
-  width: 350px;
-  border-radius: 5px;
-  border: 1px solid rgb(154, 154, 154);
-  box-shadow: 0 4px 0px -6px grey;
-  margin-left: 650px;
-  margin-top: -60px;
-}
-
 * {
   box-sizing: border-box;
 }
 
 .column {
   float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-.column2 {
   width: 50%;
   padding: 10px;
 }
@@ -181,7 +147,7 @@ input[type=submit] {
 </div>
 
 <div class="sidenav">
-  <img src="admin/Add New User/Component 31. 3.png" alt="Profile Pic">
+  <img id = "profile_pic" src="admin/Add New User/Component 31. 3.png" alt="Profile Pic">
 
     <h2 id = "sidebar_title">Functions</h2>
 
