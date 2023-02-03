@@ -75,6 +75,30 @@
   color: rgb(58, 58, 58);
 }
 
+/*style form*/
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.623);
+  height: 20px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  box-shadow: 0 4px 0px -6px grey;
+}
+
+input[type=submit] {
+  background-color: #ffc904;
+  font-size: large;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+}
+
 /*style column 1 titles*/
 #input {
   font-size: large;
@@ -176,44 +200,42 @@
 
     <div class = "main">
         <p id = "recent">Recently Viewed Students</p>
-
-        <div class = "form">
-          <div class = "row">
-            <div class = "column">
-            <p id = "input">First Name:</p>
-            <div id = "box"></div>
-
-            <p id = "input">Last Name:</p>
-            <div id = "box"></div>
-
-            <p id = "input">Campus:</p>
-            <div id = "box"></div>
-
-            <p id = "input">Date of Birth:</p>
-            <div id = "box"></div>
-            </div>
-            
-            <div class = "column2">
-              <p id = "input2">Student UCFID:</p>
-              <div id = "box2"></div>
-  
-              <p id = "input2">Student NID:</p>
-              <div id = "box2"></div>
-  
-              <p id = "input2">Knights Cash #:</p>
-              <div id = "box2"></div>
-  
-              <p id = "input2">Library #:</p>
-              <div id = "box2"></div>
-
-              <button class="button">Search</button>
-            </div>
-
-          </div>
+        <div class="row">
+          <div class="column">
+          <form action="">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="Ima"><br><br>
+      
+          <label for="id">UCF ID:</label><br>
+          <input type="text" id="id" name="id" value="1234567"><br><br>
           
+          <label for="cash">Knights Cash Account:</label><br>
+          <input type="text" id="cash" name="cash" value="600912347596"><br><br>
+      
+          <label for="birthday">Date of Birth:</label><br>
+          <input type="text" id="birthday" name="birthday" value="01/01/2001"><br><br>
   
-        </div>
-    </div>
+          <input type="submit" value="Search">
+          </div>
+
+          <div class="column">
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Knight"><br><br>
+      
+          <label for="nid">Student NID:</label><br>
+          <input type="text" id="nid" name="nid" value="ik123456"><br><br>
+      
+          <label for="library">Library Number:</label><br>
+          <input type="text" id="library" name="library" value="2210347983785"><br><br>
+
+          <label for="campus">Campus:</label><br>
+          <input type="text" id="campus" name="campus" value="Downtown"><br><br>
+      
+          </div>
+        </form> 
+        
+        </div> 
+            </div>
 
 </body>
 </html>
