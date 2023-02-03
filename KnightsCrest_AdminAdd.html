@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.banner {
+    background-color: black;
+  
+  }
+
+  /*style banner logo*/
+
+.ucf_banner {
+    padding: 0px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+}
+
+/*style top menu*/
+.top_menu {
+  margin-left: 800px;
+}
+
+/*style side bar*/
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  left: 0;
+  background-color: rgb(163, 163, 163);
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 50px;}
+  .sidenav a {font-size: 14px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*style side bar buttons*/
+#button
+{
+  background-color: transparent;
+  border: none;
+}
+
+/*style profile pic*/
+#profile_pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*style FUNCTION title*/
+#sidebar_title {
+ color:#333;
+ text-align: center;
+ border-bottom: 1px solid #333;
+ padding-bottom: 5px;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.main {
+  margin-left: 200px;
+  margin-right: 30px;
+  padding-top: 5px;
+  border: 1px solid gray ;
+}
+
+/*style ADD RECORDS title*/
+#title {
+    padding-top: 25px;
+    font-family: "arial";
+    border-bottom: 1px dotted #333;
+    color: gray;
+    margin-left: 200px;
+    margin-right: 30px;
+}
+
+/*style form*/
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.623);
+  height: 20px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  box-shadow: 0 4px 0px -6px grey;
+}
+
+input[type=submit] {
+  background-color: #ffc904;
+  font-size: large;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="ucf_banner">
+            <div class="ucf_text">
+              <img src="admin/User Search/The tab crop.png" alt="logo" width="50">
+            <img src="admin/User Search/KNIGHTS CREST.png" alt="logo">
+            </div>
+
+            <div class = "top_menu">
+                <img src = "Admin/Dashboard/Icon material-settings.png" alt="settings" width="25"> /n    
+                
+                <a href = "KnightsCrest_Admin.html">
+                <img src = "Admin/Dashboard/Icon ionic-md-exit.png" alt="settings" width="24">
+                </a>
+              </div>
+        </div>
+    </div>
+    
+    <div class="sidenav">
+      <img id = "profile_pic" src="admin/Add New User/Component 31. 3.png" alt="Profile Pic">
+    
+        <h2 id = "sidebar_title">Functions</h2>
+
+        <a href = "KnightsCrest_AdminHome.html">
+        <button id = "button">
+          <img src="admin/User Search/Search Records Button.png" alt="Search Records">
+       </button>
+        </a>
+
+       <a href = "KnightsCrest_AdminAdd.html">
+       <button id = "button">
+        <img src="admin/User Search/Add Record Button.png" alt="Add Records">
+     </button>
+       </a>
+     </div>
+
+     <div id = title>
+        <h1>ADD RECORDS</h1>  
+      </div>
+
+      <div class = "main">
+     
+<div class="row">
+    <div class="column">
+    <form action="">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Ima"><br><br>
+
+    <label for="id">UCF ID:</label><br>
+    <input type="text" id="id" name="id" value="1234567"><br><br>
+    
+    <label for="cash">Knights Cash Account:</label><br>
+    <input type="text" id="cash" name="cash" value="600912347596"><br><br>
+
+    <label for="birthday">Date of Birth:</label><br>
+    <input type="text" id="birthday" name="birthday" value="01/01/2001"><br><br>
+
+    <label for="campus">Campus:</label><br>
+    <input type="text" id="campus" name="campus" value="Downtown"><br>
+    </div>
+    <div class="column">
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Knight"><br><br>
+
+    <label for="nid">Student NID:</label><br>
+    <input type="text" id="nid" name="nid" value="ik123456"><br><br>
+
+    <label for="library">Library Account:</label><br>
+    <input type="text" id="library" name="library" value="2210347983785"><br><br>
+
+    <label for="expiration">Expiration Date:</label><br>
+    <input type="text" id="expiration" name="expiration" value="05/05/2023"><br>
+
+    <h3>Caste</h3>
+     <input type="radio" id="student" name="caste" value="Student">
+     <label for="student">Student</label><br>
+     <input type="radio" id="teacher" name="caste" value="Teacher">
+     <label for="teacher">Teacher</label><br>
+     <input type="radio" id="staff" name="caste" value="Staff">
+     <label for="staff">Staff</label><br>
+    </div>
+      <input type="submit" value="Add Record">
+  </form> 
+  
+  </div> 
+      </div>
+</body>
+</html>

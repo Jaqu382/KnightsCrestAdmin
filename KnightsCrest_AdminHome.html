@@ -8,14 +8,7 @@
   
   }
 
-  .ucf_text {
-    line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffc904;
-    font-size: small;
-    font-kerning: initial;
-    padding-left: 50px;
-}
+  /*style banner logo*/
 
 .ucf_banner {
     padding: 0px;
@@ -23,6 +16,11 @@
     margin: 0 auto;
     display: flex;
     align-items: center; 
+}
+
+/*style top menu*/
+.top_menu {
+  margin-left: 800px;
 }
 
 /*style side bar*/
@@ -33,7 +31,7 @@
   left: 0;
   background-color: rgb(163, 163, 163);
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 @media screen and (max-height: 450px) {
@@ -41,15 +39,104 @@
   .sidenav a {font-size: 14px;}
 }
 
+/*style side bar buttons*/
 #button
 {
   background-color: transparent;
   border: none;
 }
 
-#title {
-  color: gray;
+/*style profile pic*/
+#profile_pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
+
+/*style FUNCTION title*/
+#sidebar_title {
+ color:#333;
+ text-align: center;
+ border-bottom: 1px solid #333;
+ padding-bottom: 5px;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.main {
+  margin-left: 200px;
+  margin-right: 30px;
+  padding-top: 5px;
+  border: 1px solid gray ;
+}
+
+/*style SEARCH RECORDS title*/
+#title {
+    padding-top: 25px;
+    font-family: "arial";
+    border-bottom: 1px dotted #333;
+    color: gray;
+    margin-left: 200px;
+    margin-right: 30px;
+}
+
+/*style recently viewed students text*/
+#recent {
+  margin-left: 20px;
+  font-size: medium;
+  color: rgb(58, 58, 58);
+}
+
+/*style form*/
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.623);
+  height: 20px;
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  box-shadow: 0 4px 0px -6px grey;
+}
+
+input[type=submit] {
+  background-color: #ffc904;
+  font-size: large;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  background-color: #ffc904;
+  font-size: large;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+}
+
 
 </style>
 </head>
@@ -58,26 +145,80 @@
 <div class="banner">
     <div class="ucf_banner">
         <div class="ucf_text">
-        <p>UNIVERSITY OF CENTRAL FLORIDA - KNIGHTSCREST</p>
+          <img src="admin/User Search/The tab crop.png" alt="logo" width="50">
+        <img src="admin/User Search/KNIGHTS CREST.png" alt="logo">
+        </div>
+
+        <div class = "top_menu">
+          <img src = "Admin/Dashboard/Icon material-settings.png" alt="settings" width="25"> /n    
+          
+          <a href = "KnightsCrest_Admin.html">
+          <img src = "Admin/Dashboard/Icon ionic-md-exit.png" alt="settings" width="24">
+          </a>
         </div>
     </div>
 </div>
 
 <div class="sidenav">
-    <p>profile pic</p>
+  <img id = "profile_pic" src="admin/Add New User/Component 31. 3.png" alt="Profile Pic">
+
+    <h2 id = "sidebar_title">Functions</h2>
+    <a href = "KnightsCrest_AdminHome.html">
     <button id = "button">
       <img src="admin/User Search/Search Records Button.png" alt="Search Records">
    </button>
+    </a>
+
+   <a href = "KnightsCrest_AdminAdd.html">
    <button id = "button">
-    <img src="admin/User Search/Add Record Button.png" alt="Search Records">
+    <img src="admin/User Search/Add Record Button.png" alt="Add Records">
  </button>
+   </a>
  </div>
 
- <div class = "main">
     <div id = title>
-      <h1>Search Records</h1>  
+      <h1>SEARCH RECORDS</h1>  
     </div>
- </div>
+
+
+    <div class = "main">
+        <p id = "recent">Recently Viewed Students</p>
+        <div class="row">
+          <div class="column">
+          <form action="">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="Ima"><br><br>
+      
+          <label for="id">UCF ID:</label><br>
+          <input type="text" id="id" name="id" value="1234567"><br><br>
+          
+          <label for="cash">Knights Cash Account:</label><br>
+          <input type="text" id="cash" name="cash" value="600912347596"><br><br>
+      
+          <label for="birthday">Date of Birth:</label><br>
+          <input type="text" id="birthday" name="birthday" value="01/01/2001"><br><br>
+  
+          <input type="submit" value="Search">
+          </div>
+
+          <div class="column">
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Knight"><br><br>
+      
+          <label for="nid">Student NID:</label><br>
+          <input type="text" id="nid" name="nid" value="ik123456"><br><br>
+      
+          <label for="library">Library Number:</label><br>
+          <input type="text" id="library" name="library" value="2210347983785"><br><br>
+
+          <label for="campus">Campus:</label><br>
+          <input type="text" id="campus" name="campus" value="Downtown"><br><br>
+      
+          </div>
+        </form> 
+        
+        </div> 
+            </div>
 
 </body>
 </html>
