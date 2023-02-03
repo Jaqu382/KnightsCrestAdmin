@@ -8,14 +8,7 @@
   
   }
 
-  .ucf_text {
-    line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffc904;
-    font-size: small;
-    font-kerning: initial;
-    padding-left: 50px;
-}
+  /*style banner logo*/
 
 .ucf_banner {
     padding: 0px;
@@ -41,12 +34,14 @@
   .sidenav a {font-size: 14px;}
 }
 
+/*style side bar buttons*/
 #button
 {
   background-color: transparent;
   border: none;
 }
 
+/*style FUNCTION title*/
 #sidebar_title {
  color:#333;
  text-align: center;
@@ -63,6 +58,7 @@
   border: 1px solid gray ;
 }
 
+/*style SEARCH RECORDS title*/
 #title {
     padding-top: 25px;
     font-family: "arial";
@@ -72,21 +68,24 @@
     margin-right: 30px;
 }
 
+/*style recently viewed students text*/
 #recent {
   margin-left: 20px;
   font-size: medium;
   color: rgb(58, 58, 58);
 }
 
+/*style column 1 titles*/
 #input {
   font-size: large;
-  margin-left:30px;
+  margin-left:20px;
   color: gray;
 }
 
+/*style column2 titles*/
 #input2{
   font-size: large;
-  margin-left: 600px;
+  margin-left: 560px;
   color:gray;
 }
 
@@ -97,7 +96,7 @@
   border-radius: 5px;
   border: 1px solid rgb(154, 154, 154);
   box-shadow: 0 4px 0px -6px grey;
-  margin-left: 160px;
+  margin-left: 135px;
   margin-top: -40px;
 
 }
@@ -109,12 +108,17 @@
   border-radius: 5px;
   border: 1px solid rgb(154, 154, 154);
   box-shadow: 0 4px 0px -6px grey;
-  margin-left: 730px;
-  margin-top: -40px;
+  margin-left: 650px;
+  margin-top: -60px;
 }
 
 .column {
   float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column2 {
   width: 50%;
   padding: 10px;
 }
@@ -134,6 +138,7 @@
   padding: 8px;
 }
 
+
 </style>
 </head>
 
@@ -148,7 +153,7 @@
 </div>
 
 <div class="sidenav">
-    <p>profile pic</p>
+  <img src="admin/Add New User/Component 31. 3.png" alt="Profile Pic">
 
     <h2 id = "sidebar_title">Functions</h2>
 
@@ -156,7 +161,7 @@
       <img src="admin/User Search/Search Records Button.png" alt="Search Records">
    </button>
    <button id = "button">
-    <img src="admin/User Search/Add Record Button.png" alt="Search Records">
+    <img src="admin/User Search/Add Record Button.png" alt="Add Records">
  </button>
  </div>
 
@@ -171,7 +176,7 @@
         <div class = "form">
           <div class = "row">
             <div class = "column">
-          <p id = "input">First Name:</p>
+            <p id = "input">First Name:</p>
             <div id = "box"></div>
 
             <p id = "input">Last Name:</p>
@@ -182,9 +187,9 @@
 
             <p id = "input">Date of Birth:</p>
             <div id = "box"></div>
-
             </div>
-            <div class = "column">
+            
+            <div class = "column2">
               <p id = "input2">Student UCFID:</p>
               <div id = "box2"></div>
   
@@ -198,9 +203,8 @@
               <div id = "box2"></div>
 
               <button class="button">Search</button>
-
-
             </div>
+
           </div>
           
   
