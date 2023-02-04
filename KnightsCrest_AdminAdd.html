@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="process_form.js"></script>
 <style>
   body {
     margin:0; 
@@ -129,7 +130,9 @@ input[type=submit] {
   padding: 8px;
   margin-left: 10px;
 }
-
+ fieldset {
+  border: none;
+ }
 </style>
 </head>
 
@@ -178,8 +181,9 @@ input[type=submit] {
       <div class = "main">
      
 <div class="row">
+  <form action="process_form.js" method="post" name="myform">
+    <fieldset>
     <div class="column">
-    <form action="">
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname" value="Ima"><br><br>
 
@@ -217,7 +221,9 @@ input[type=submit] {
      <label for="staff">Staff</label><br>
     </div>
       <input type="submit" value="Add Record">
+    </fieldset>
   </form> 
+
   
   </div> 
       </div>
