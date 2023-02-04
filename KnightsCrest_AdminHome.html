@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="process_form.js"></script>
 <style>
   body{
     margin: 0;
@@ -120,6 +121,10 @@ input[type=submit] {
   margin-left: 10px;
 }
 
+fieldset{
+  border: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -190,13 +195,13 @@ input[type=submit] {
       <h1>SEARCH RECORDS</h1>  
     </div>
 
-
     <div class = "main">
         <p id = "recent">Recently Viewed Students</p>
         <div class="row">
+          <form action="process_form.js" method="post" name="myform">
+            <fieldset>
           <div class="column">
-          <form action="">
-          <label for="fname">First name:</label><br>
+              <label for="fname">First name:</label><br>
           <input type="text" id="fname" name="fname" value="Ima"><br><br>
       
           <label for="id">UCF ID:</label><br>
@@ -208,7 +213,7 @@ input[type=submit] {
           <label for="birthday">Date of Birth:</label><br>
           <input type="text" id="birthday" name="birthday" value="01/01/2001"><br><br>
   
-          <input type="submit" value="Search">
+          <input type="submit"  id="submit" name="submit" value="Search">
           </div>
 
           <div class="column">
@@ -225,6 +230,7 @@ input[type=submit] {
           <input type="text" id="campus" name="campus" value="Downtown"><br><br>
       
           </div>
+        </fieldset>
         </form> 
         
         </div> 
