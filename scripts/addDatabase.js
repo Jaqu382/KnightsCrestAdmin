@@ -29,6 +29,7 @@
   let birthday;
   let expiration;
   let campus;
+  let profile;
   let caste;
 
   // Listen for the form submit event
@@ -45,6 +46,7 @@
       birthday = document.getElementById("birthday");
       expiration = document.getElementById("expiration");
       campus = document.getElementById("campus");
+      profile = document.getElementById("profile")
       caste = document.querySelector('input[name="caste"]:checked').value;
 
     // Add the data to the database
@@ -58,7 +60,8 @@
       date_of_birth: birthday.value,
       expiration_date: expiration.value,
       campus: campus.value,
-      caste: caste
+      profile_picture: profile.value,
+      caste: caste,
     });
 
     // Show a success message to the user
@@ -74,4 +77,5 @@
     birthday.value = "";
     expiration.value = "";
     campus.value = "";
+    profile.value = "";
   });}
