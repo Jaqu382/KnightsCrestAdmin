@@ -1,8 +1,3 @@
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -13,30 +8,44 @@
     storageBucket: "knightscrest.appspot.com",
     messagingSenderId: "595850728642",
     appId: "1:595850728642:web:7885d4b5387a97b91d975b",
-    measurementId: "G-M4V6P20S2R"
+    measurementId: "G-M4V6P20S2R",
+    databaseURL: "https://knightscrest-default-rtdb.firebaseio.com/"
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
 
+  window.onload = function() {
+
   // Get the form elements
-  var fname = document.getElementById("fname");
-  var lname = document.getElementById("lname");
-  var id = document.getElementById("id");
-  var nid = document.getElementById("nid");
-  var cash = document.getElementById("cash");
-  var library = document.getElementById("library");
-  var birthday = document.getElementById("birthday");
-  var expiration = document.getElementById("expiration");
-  var campus = document.getElementById("campus");
-  var caste = document.querySelector('input[name="caste"]:checked').value;
+  let fname;
+  let lname;
+  let id;
+  let nid;
+  let cash;
+  let library;
+  let birthday;
+  let expiration;
+  let campus;
+  let caste;
 
   // Listen for the form submit event
   document.myform.addEventListener("submit", function(event) {
     event.preventDefault();
+
+      // Get the form elements
+      fname = document.getElementById("fname");
+      lname = document.getElementById("lname");
+      id = document.getElementById("id");
+      nid = document.getElementById("nid");
+      cash = document.getElementById("cash");
+      library = document.getElementById("library");
+      birthday = document.getElementById("birthday");
+      expiration = document.getElementById("expiration");
+      campus = document.getElementById("campus");
+      caste = document.querySelector('input[name="caste"]:checked').value;
 
     // Add the data to the database
     database.ref("users/").push({
@@ -65,4 +74,4 @@
     birthday.value = "";
     expiration.value = "";
     campus.value = "";
-  });
+  });}
