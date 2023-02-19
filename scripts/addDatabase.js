@@ -1,6 +1,5 @@
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  // Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyBI4OxpPSYzATmb7qu21_4GgkW4h9-KXOY",
     authDomain: "knightscrest.firebaseapp.com",
@@ -17,7 +16,7 @@
 
   var database = firebase.database();
 
-  window.onload = function() {
+  function init() {
 
   // Get the form elements
   let fname;
@@ -79,3 +78,4 @@
     campus.value = "";
     profile.value = "";
   });}
+  window.addEventListener("load", init, false);
