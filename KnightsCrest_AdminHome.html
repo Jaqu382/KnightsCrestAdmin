@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="scripts/process_form.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+  <script src="scripts/search.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
@@ -50,50 +52,55 @@
     </div>
 
     <div class = "main">
+
+      <!-- Search form -->
         <p id = "recent">Recently Viewed Students</p>
         <div class="row">
           <form action="process_form.js" method="post" name="myform">
             <fieldset>
           <div class="column">
               <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value="Ima"><br><br>
+          <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
       
           <label for="id">UCF ID:</label><br>
-          <input type="text" id="id" name="id" value="1234567"><br><br>
+          <input type="text" id="id" name="id"><br><br>
           
           <label for="cash">Knights Cash Account:</label><br>
-          <input type="text" id="cash" name="cash" value="600912347596"><br><br>
+          <input type="text" id="cash" name="cash"><br><br>
       
           <label for="birthday">Date of Birth:</label><br>
-          <input type="text" id="birthday" name="birthday" value="01/01/2001"><br><br>
-  
+          <input type="text" id="birthday" name="birthday" placeholder="DD/MM/YYYY"><br><br>
+
           <input type="submit"  id="submit" name="submit" value="Search">
           </div>
 
           <div class="column">
           <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value="Knight"><br><br>
+          <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
       
           <label for="nid">Student NID:</label><br>
-          <input type="text" id="nid" name="nid" value="ik123456"><br><br>
+          <input type="text" id="nid" name="nid" placeholder="ik123456"><br><br>
       
           <label for="library">Library Number:</label><br>
-          <input type="text" id="library" name="library" value="2210347983785"><br><br>
+          <input type="text" id="library" name="library" placeholder="2210347983785"><br><br>
 
           <label for="campus">Campus:</label><br>
           <select id="campus">
-            <option value="Main">UCF Main Campus</option>
-            <option value="DT">UCF Downtown</option>
+            <option value="" disabled selected>Select a campus</option>
+            <option value="Main Campus">UCF Main Campus</option>
+            <option value="Downtown">UCF Downtown</option>
             <option value="Online">UCF Online</option>
             <option value="Rosen">Rosen</option>
           </select><br>
-      
           </div>
+
         </fieldset>
         </form> 
+
+      <!-- Results table -->
         </div> 
             </div>
-          	<table id="results-table">
+          	<table id="resultsTable">
               <thead>
                 <tr>
                   <th>First Name</th>

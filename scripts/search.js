@@ -13,22 +13,94 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-var database = firebase.database();
+  // Get a reference to the database service
+  var database = firebase.database();
+
+  // Get a reference to the form and table
+
+
 
 function init() {
-    document.getElementById("search-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // prevent the form from submitting
+  
+var form = document.querySelector('form[name="myform"]');
+var table = document.querySelector('#resultsTable tbody');
 
-        // Get the search criteria from the form
-        var firstName = document.getElementById("first-name").value.trim();
-        var lastName = document.getElementById("last-name").value.trim();
-        var nid = document.getElementById("nid").value.trim();
-        var ucfid = document.getElementById("ucfid").value.trim();
-        var campus = document.getElementById("campus").value.trim();
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the form values
+  var firstName = document.querySelector('#fname').value;
+  var lastName = document.querySelector('#lname').value;
+  var nid = document.querySelector('#nid').value;
+  var ucfid = document.querySelector('#id').value;
+  var campus = document.querySelector('#campus').value;
+  var cashNumber = document.querySelector('#cash').value;
+  var libraryNumber = document.querySelector('#library').value;
+  var dob = document.querySelector('#birthday').value;
+
+    // Set the starting point for the query based on the search parameters
+    var query = database.ref('users');
+
+    // Filter the results based on the search criteria
+    var results = [];
+
+    query.once('value', function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+
+      if(
+      (!firstName || childData.first_name === firstName) && 
+      (!lastName || childData.last_name === lastName) &&
+      (!ucfid || childData.ucf_id === ucfid) &&
+      (!nid || childData.student_nid === nid) &&
+      (!campus || childData.campus === campus) &&
+      (!cashNumber || childData.knights_cash_account === cashNumber) &&
+      (!libraryNumber || childData.library_account === libraryNumber) &&
+      (!dob || childData.date_of_birth === dob)) {
+      results.push(childData);
+      }
+    });
+
     
-    
-    
-    }
+
+
+      // Clear the table of all existing content
+      while(table.rows.length > 0) {
+        table.deleteRow(0);
+      }
+
+      console.log(results); 
+      // Loop through the search results and append them to the table
+      results.forEach(function(result) {
+        var row = document.createElement('tr');
+        var firstNameCell = document.createElement('td');
+        var lastNameCell = document.createElement('td');
+        var nidCell = document.createElement('td');
+        var ucfidCell = document.createElement('td');
+        var campusCell = document.createElement('td');
+        var cashNumberCell = document.createElement('td');
+        var libraryNumberCell = document.createElement('td');
+        var dobCell = document.createElement('td');
+        firstNameCell.appendChild(document.createTextNode(result.first_name));
+        lastNameCell.appendChild(document.createTextNode(result.last_name));
+        nidCell.appendChild(document.createTextNode(result.student_nid));
+        ucfidCell.appendChild(document.createTextNode(result.ucf_id));
+        campusCell.appendChild(document.createTextNode(result.campus));
+        cashNumberCell.appendChild(document.createTextNode(result.knights_cash_account));
+        libraryNumberCell.appendChild(document.createTextNode(result.library_account));
+        dobCell.appendChild(document.createTextNode(result.date_of_birth));
+        row.appendChild(firstNameCell);
+        row.appendChild(lastNameCell);
+        row.appendChild(nidCell);
+        row.appendChild(ucfidCell);
+        row.appendChild(campusCell);
+        row.appendChild(cashNumberCell);
+        row.appendChild(libraryNumberCell);
+        row.appendChild(dobCell);
+        table.appendChild(row);
+      });
+    });
+  });
 
 }
 window.addEventListener("load", init, false);
