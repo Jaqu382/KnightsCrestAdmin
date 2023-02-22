@@ -64,8 +64,6 @@ form.addEventListener('submit', function(event) {
       while(table.rows.length > 0) {
         table.deleteRow(0);
       }
-
-      console.log(results); 
       // Loop through the search results and append them to the table
       results.forEach(function(result) {
         var row = document.createElement('tr');
@@ -77,10 +75,13 @@ form.addEventListener('submit', function(event) {
         var cashNumberCell = document.createElement('td');
         var libraryNumberCell = document.createElement('td');
         var dobCell = document.createElement('td');
+        var ucfidLink = document.createElement('a');
         firstNameCell.appendChild(document.createTextNode(result.first_name));
         lastNameCell.appendChild(document.createTextNode(result.last_name));
         nidCell.appendChild(document.createTextNode(result.student_nid));
-        ucfidCell.appendChild(document.createTextNode(result.ucf_id));
+        ucfidLink.href = "user.html?ucfid=" + encodeURIComponent(result.ucf_id);
+        ucfidLink.appendChild(document.createTextNode(result.ucf_id));
+        ucfidCell.appendChild(ucfidLink);
         campusCell.appendChild(document.createTextNode(result.campus));
         cashNumberCell.appendChild(document.createTextNode(result.knights_cash_account));
         libraryNumberCell.appendChild(document.createTextNode(result.library_account));
