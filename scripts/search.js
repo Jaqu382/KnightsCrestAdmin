@@ -1,4 +1,4 @@
-  // Firebase configuration
+// Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyBI4OxpPSYzATmb7qu21_4GgkW4h9-KXOY",
     authDomain: "knightscrest.firebaseapp.com",
@@ -15,8 +15,6 @@
 
   // Get a reference to the database service
   var database = firebase.database();
-
-  // Get a reference to the form and table
 
 
 
@@ -44,7 +42,8 @@ form.addEventListener('submit', function(event) {
     // Filter the results based on the search criteria
     var results = [];
 
-    query.once('value', function(snapshot) {
+    query.once('value', 
+      function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
 
@@ -96,6 +95,17 @@ form.addEventListener('submit', function(event) {
         row.appendChild(dobCell);
         table.appendChild(row);
       });
+      // Add an event listener to the table that listens for a click on a table row
+      table.addEventListener('click', function(event) {
+      // Check if a table row was clicked
+      if (event.target.nodeName === 'td') {
+      // Get the UCF ID of the user from the table cell
+      var ucfid = event.target.parentNode.querySelector('td:nth-child(4)').textContent;
+      // Redirect to the user's data page with the UCF ID as a query parameter
+      window.location.href = 'user.html?ucfid=' + ucfid;
+  }
+});
+
     });
   });
 
