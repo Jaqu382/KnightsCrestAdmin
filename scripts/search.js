@@ -60,10 +60,7 @@ form.addEventListener('submit', function(event) {
       results.push(childData);
       }
     });
-
     
-
-
       // Clear the table of all existing content
       while(table.rows.length > 0) {
         table.deleteRow(0);
